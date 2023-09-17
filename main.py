@@ -118,20 +118,22 @@ def run_object_detection(source, flip, use_popup, model, device):
             # Mean processing time [ms].
             processing_time = np.mean(processing_times) * 1000
             fps = 1000 / processing_time
-            cv2.putText(
-                img=frame,
-                text=f"Inference time: {processing_time:.1f}ms ({fps:.1f} FPS)",
-                org=(20, 40),
-                fontFace=cv2.FONT_HERSHEY_COMPLEX,
-                fontScale=f_width / 1000,
-                color=(0, 0, 255),
-                thickness=1,
-                lineType=cv2.LINE_AA,
-            )
+            text = f"Inference time: {processing_time:.1f}ms ({fps:.1f} FPS)",
+            # cv2.putText(
+            #     img=frame,
+            #     text=f"Inference time: {processing_time:.1f}ms ({fps:.1f} FPS)",
+            #     org=(20, 40),
+            #     fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            #     fontScale=f_width / 1000,
+            #     color=(0, 0, 255),
+            #     thickness=1,
+            #     lineType=cv2.LINE_AA,
+            # )
+            print(text)
             # Use this workaround if there is flickering.
             # if use_popup:
             print('***********',use_popup)
-            cv2.imshow(winname='title', mat=frame)
+            # cv2.imshow(winname='title', mat=frame)
             key = cv2.waitKey(1)
             # escape = 27
             if key == 27:
