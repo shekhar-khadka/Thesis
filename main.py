@@ -134,10 +134,10 @@ def run_object_detection(source, flip, use_popup, model, device):
             # if use_popup:
             print('***********',use_popup)
             # cv2.imshow(winname='title', mat=frame)
-            key = cv2.waitKey(1)
-            # escape = 27
-            if key == 27:
-                break
+            # key = cv2.waitKey(1)
+            # # escape = 27
+            # if key == 27:
+            #     break
             # else:
             #     # Encode numpy array to jpg.
             #     _, encoded_img = cv2.imencode(
