@@ -166,5 +166,5 @@ WEBCAM_INFERENCE = False
 if WEBCAM_INFERENCE:
     VIDEO_SOURCE = 0  # Webcam
 else:
-    VIDEO_SOURCE = 'C:/Users/a828634/Desktop/Personal/CLZ/OpenVINO/v2.mp4'
+    VIDEO_SOURCE = 'v2.mp4'
 run_object_detection(source=VIDEO_SOURCE, flip=True, use_popup=False, model=det_ov_model, device="AUTO")
